@@ -1,6 +1,8 @@
 #include "compiler.cpp"
 #include <settings.h>
 #include <iostream>
+#include <string>
+using std::string;
 
 class userInput {
     void getInput() {
@@ -9,7 +11,9 @@ class userInput {
         std::cout << "Please input the target JS version.";
         std::cin >> input::target;
     };
-    std::string checkValidInput(std::string path, std::string target) {};
+    bool checkValidPath(string path) {
+        return false;
+    };
     void processInput() {};
 };
 int main() {
