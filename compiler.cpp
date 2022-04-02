@@ -1,6 +1,10 @@
 #include "parser/es2015.cpp"
+#include <settings.h>
 #include <string>
+#include <fstream>
 
-namespace target {
-    std::string version;
+class init {
+    void x() {
+
+    };
 };
