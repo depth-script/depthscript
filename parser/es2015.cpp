@@ -1,0 +1,3 @@
+namespace es2015 {
+    
+}

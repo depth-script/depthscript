@@ -1,30 +1,35 @@
 #include "compiler.cpp"
-#include <settings.h>
-#include <constants.h>
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <cctype>
 using std::string;
+using std::fstream;
 
+string path, target;
 class userInput {
     public:
         void getInput() {
-            std::cout << "Please input the absolute file path.";
-            std::cin >> string path;
-            userInput.checkValidPath(path);
-            std::cout << "Please input the target JS version.";
-            userInput.checkValidTarget(target);
-            std::cin >> input::target;
+            std::cout << "DepthScript v0.0.0a Compiler \nCopyright© \nPress ENTER to continue" << std::endl;
+            std::cout << "Please input the absolute file path" << std::endl;
+            std::cin >> path;
+            std::cout << "Please input the target JS version \nOptions: es2015" << std::endl;        
+            std::cin >> target;
         };
-        bool checkValidPath(string path) {
-            return true;;
+        string path, target;
+};
+class compile {
+    public:
+        void init() {
+            dsc::input input;
+            input.init(path, target);
+            std::cout << "Initialised";
         };
-        bool checkValidTarget(string target) {
-            Targets targets;
-            targets = target;
-            return true;
-        }
-        void processInput() {};
 };
 int main() {
+    userInput userInput;
+    userInput.getInput();
+    compile compile;
+    compile.init();
     return 0;
 };
